@@ -27,10 +27,15 @@ img.floatRight {
 .flipPage {
     display:block;
     width:100%;
-    height:500px;
+    height:450px;
     overflow:hidden;
 }
 
+.pageContent {
+    display:block;
+    width:100%;
+    height:600px;
+}
 
 #wrap {width:882px; margin:auto;}
 .clear {clear:both;}
