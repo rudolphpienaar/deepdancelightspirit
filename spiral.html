@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>deep dance light spirit</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src='js/misc.js'></script>
+</head>
+
+<body>
+
+<div id="topbar">
+	<div id="TopSection">
+    <!--#include virtual="./sitename.html" -->
+		<ul id="topmenu">
+			<li><a href="index.html">home</a></li>
+			<li class="active"><a href="journeys.html">journeys</a></li>
+			<li><a href="events.html">events</a></li>
+			<li><a href="faq.html">faq</a></li>
+			<li><a href="about.html">about</a></li>
+			<li><a href="contact.html">contact</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="wrap">
+  <div id="contents">
+    <div id="left">
+    <h2><a href="#">spiral... </a></h2>
+    <div id="container">
+
+    <div id="div1">
+        <div class="flipPage">
+        <p>
+		Eadem Mutata Resurgo “I shall arise the same though changed”
+		</p>
+		<p>
+		That is the inscription on the tombstone of Jakob Bernouilli, a Swiss Mathematician (1654 - 1705), who wrote a treatise about spirals called Spira mirabilis (Wonderful Spirals).        	
+        </p><p>
+        <img src="images/spiral.jpg" width="200" alt="spiral dancing" class="floatRight"/>
+		Indeed, spirals are wonderful, miraculous, and almost magical magical shapes. They embody the dynamic principles of regeneration and symmetrical and balanced growth. Spirals are the divine symbol of life -- either expanding, growing, and being drawn out, or diminishing, dissolving, and collapsing.
+        </p>
+        </div>
+
+        <div style="float:right;" class="next">
+            <span class="navbutton">next...</span>
+        </div>
+    </div>
+
+    <div id="div2" class="hidden">
+        <div class="flipPage">
+        <p>
+		The spiral is found everywhere, from our DNA to roses; from cowlicks to hurricanes; from our fists to galaxies. In this next Deep Dance you are invited to come and explore spirals.
+        </p><p>
+        <!-- <img src="images/energy.jpg" alt="energy" class="floatRight"/> -->
+		The music and dance will facilitate an inward movement of psyche. We gather the universal, group, and individual energy and fold it up on our journey towards the center or the source. There, in the eye of Horus, the place of stillness, we can see clearly who we are. When we see who we are, something magical happens: we’re able to pass through the gateway of our illusions and come out on the other side, spiralling out in a process of emergence, expansion, and joyful creativity.
+        </p>
+        </div>
+    
+        <div style="float:left;" class="previous">
+            <span class="navbutton">previous...</span>
+        </div>
+        <div style="float:right;" class="next">
+            <span class="navbutton">next...</span>
+        </div>
+    </div>
+
+    <div id="div3" class="hidden">
+        <div class="flipPage">
+        <p>
+		As before we will dance joyfully and dynamically and with intent with each other and ourselves inside the sacred space of the spiral. Touch is an integral part of our journey and I encourage you to read the FAQ page at www.deepdancelightspirit.com to learn more about that.
+        </p>
+        <!-- <img src="images/sun-web.jpg" alt="sun" class="floatLeft"/> -->
+        In order to fully love yourself  and others, you must be willing to 
+        </div>
+        
+        <div style="float:left;" class="previous">
+            <span class="navbutton">previous...</span>
+        </div>
+    </div>
+
+    </div>
+    </div>
+  </div>
+</div>
+
+<!--#include virtual="./footer.html" -->
+
+<script type="text/javascript">
+document.getElementById( 'container' ).onclick = function( e ) {
+
+    // First, get the clicked element
+    // We have to add these lines because IE is bad.
+    // If you don't work with legacy browsers, the following is enough:
+    var evt = e || window.event,
+    target = evt.target || evt.srcElement;
+    //target = e.target;
+    var navElement  = target.parentNode.className;
+    var divElement  = target.parentNode.parentNode;
+    
+    if(navElement == 'next' || navElement == 'previous') {
+        if(divElement.id.substr(0, 3) == 'div') {
+            divElement.className = 'hidden';
+            var str_id  = divElement.id.substr(3);
+            var id      = parseInt(str_id);
+            if(navElement == 'next') id++;
+            else id--;
+            var str_idNew   = id.toString();
+            var nextDivId   = 'div' + str_idNew;
+            document.getElementById(nextDivId).className = '';
+        }
+    }
+    
+};  
+</script>
+
+</body>
+</html>
