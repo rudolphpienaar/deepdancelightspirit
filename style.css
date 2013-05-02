@@ -170,6 +170,11 @@ blockquote p {font-size:12px; }
 #homecontents2 h2 a{text-decoration:none; color:#8d6932;}
 #homecontents2 h2 a:hover { text-decoration:none; color:#000000; border-bottom:solid 1px #000000; background:#ffffcc;}
 
+.journey {float:left; width:530px; padding:0px 0px 0px 20px; margin:5px 5px 5px 0px;  background:url(images/sidebarbg1.jpg) repeat-y left;}
+.journey p, left p, right p {margin:10px 0px 10px 0px;}
+.journey h2 {display:block; color:#8d6932; border-bottom:solid 1px #E1D2A6; font-size:22px;}
+.journey h2 a{text-decoration:none; color:#8d6932;}
+.journey h2 a:hover { text-decoration:none; color:#000000; border-bottom:solid 1px #000000; background:#ffffcc;}
 
 
 /*Footer*/
