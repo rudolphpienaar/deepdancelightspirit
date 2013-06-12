@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>deep dance light spirit</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src='js/misc.js'></script>
+</head>
+
+<body>
+
+<div id="topbar">
+	<div id="TopSection">
+    <!--#include virtual="./sitename.html" -->
+		<ul id="topmenu">
+			<li><a href="index.html">home</a></li>
+			<li class="active"><a href="journeys.html">journeys</a></li>
+			<li><a href="events.html">events</a></li>
+			<li><a href="faq.html">faq</a></li>
+			<li><a href="about.html">about</a></li>
+			<li><a href="contact.html">contact</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="wrap">
+  <div id="contents">
+    <div id="left">
+    <h2><a href="#">shapeshifting... </a></h2>
+    <div id="container">
+
+    <div id="div1">
+        <div class="flipPage">
+            <p><i>
+            "I am large. I contain multitudes"
+            </i></p><p>
+        <img src="images/shapeshifting-journey2.jpg" width="200" alt="spiral dancing" class="floatRight"/>
+        These words come from Walt Whitman’s epic poem “Song of Myself.”  We are large. We contain multitudes.  Do you feel this? Do you feel that you are large?  Do you know it to be true?
+            </p><p>
+            <b>In the scale of time and space we seem to be minuscule, teeny tiny dust motes dancing for but a milli-second, but inside our hearts and souls and minds we fold up whole worlds of experience, imagination and knowledge.</b>
+            </p><p>
+Through the lens of our own understanding we can gaze at the magnificence of the incredibly big, amazingly awesome, impossibly mysterious universe.  We are part of that universe. And what we see when we look out is no more amazing than all that lies within. All that beauty, complexity, power and possibility is within each and every one of us too.  "I am large. I contain multitudes."            
+            </p>
+        </div>
+
+        <div style="float:right;" class="next">
+            <span class="navbutton">next...</span>
+        </div>
+    </div>
+
+
+    <div id="div2" class="hidden">
+        <div class="flipPage">
+        <p>
+        <img src="images/shapeshifting-main.jpg" width="200" alt="spiral dancing" class="floatRight"/>
+        
+        Maybe you have noticed that you are a slightly different person depending on where you are or who you are with. Some might say that when people change their behavior to fit different circumstances they are not true to themselves.  But consider that you have in this life, the gift to become whoever you want to become. Changing according to the circumstances or shapeshifting is merely you trying out different ways of being and seeing what you like and what you don’t like.
+        </p><p>
+        Like clouds changing shape we can play with all the facets of our being, all the different variations of self-expression.  Life is challenging but there can be joy amidst the challenge if you allow yourself to move fluidly from one state to the next, shifting shapes to suit the environment or circumstances you find yourself in. This fluid adaptation can make our journey through this life so much easier.  To recognize what a situation calls for and decide to adapt in the way that will be best for you: that is freedom.        
+        </p>
+        </div>
+        
+        <div style="float:left;" class="previous">
+            <span class="navbutton">previous...</span>
+        </div>
+    </div>
+
+    </div>
+    </div>
+  </div>
+</div>
+
+<!--#include virtual="./footer.html" -->
+
+<script type="text/javascript">
+document.getElementById( 'container' ).onclick = function( e ) {
+
+    // First, get the clicked element
+    // We have to add these lines because IE is bad.
+    // If you don't work with legacy browsers, the following is enough:
+    var evt = e || window.event,
+    target = evt.target || evt.srcElement;
+    //target = e.target;
+    var navElement  = target.parentNode.className;
+    var divElement  = target.parentNode.parentNode;
+    
+    if(navElement == 'next' || navElement == 'previous') {
+        if(divElement.id.substr(0, 3) == 'div') {
+            divElement.className = 'hidden';
+            var str_id  = divElement.id.substr(3);
+            var id      = parseInt(str_id);
+            if(navElement == 'next') id++;
+            else id--;
+            var str_idNew   = id.toString();
+            var nextDivId   = 'div' + str_idNew;
+            document.getElementById(nextDivId).className = '';
+        }
+    }
+    
+};  
+</script>
+
+</body>
+</html>

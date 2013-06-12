@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>deep dance light spirit</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src='js/misc.js'></script>
+</head>
+
+<body>
+
+<div id="topbar">
+	<div id="TopSection">
+    <!--#include virtual="./sitename.html" -->
+		<ul id="topmenu">
+			<li><a href="index.html">home</a></li>
+			<li class="active"><a href="journeys.html">journeys</a></li>
+			<li><a href="events.html">events</a></li>
+			<li><a href="faq.html">faq</a></li>
+			<li><a href="about.html">about</a></li>
+			<li><a href="contact.html">contact</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="wrap">
+  <div id="contents">
+    <div id="left">
+    <h2><a href="#">precious sweet juicy tender wonderful hearts..! </a></h2>
+    <div id="container">
+
+    <div id="div1">
+        <div class="flipPage">
+            <p>
+            Let's dance to our hearts--our precious hearts!            
+            </p><p>
+            Our hearts that give us so much joy. Our hearts that steer us in the direction of our happiness.                
+        <img src="images/fireheart.jpg" width="200" alt="dance to the present" class="floatLeft"/>            </p>            
+            <p>
+            When we dance our hearts, we heal them, we massage them, we give them permission to feel. Those of you who have attended a dance already know how light spirited things get when we dance together. When we become like children giving ourselves permission to play and feel whatever we feel, our hearts open up and our spirits soar. Taking yourself dancing is a gift from your mind to your body and your soul.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div id="div2" class="hidden">
+        <div class="flipPage">
+        <p>
+        <img src="images/present-time.png" width="200" alt="spiral dancing" class="floatRight"/>
+        
+        In Dance to the Present, you‚Äôll be invited to turn your inner eye towards different aspects of your life and unwrap them to see what gifts they hold for you.
+        </p><p>
+        Dance is an ecstatic portal into ourselves. If we allow ourselves to be fully present in the moment we are surprised by the treasure trove of boxes within boxes that is revealed to us.        
+        </p>
+        </div>
+        
+        <div style="float:left;" class="previous">
+            <span class="navbutton">previous...</span>
+        </div>
+    </div>
+
+    </div>
+    </div>
+  </div>
+</div>
+
+<!--#include virtual="./footer.html" -->
+
+<script type="text/javascript">
+document.getElementById( 'container' ).onclick = function( e ) {
+
+    // First, get the clicked element
+    // We have to add these lines because IE is bad.
+    // If you don't work with legacy browsers, the following is enough:
+    var evt = e || window.event,
+    target = evt.target || evt.srcElement;
+    //target = e.target;
+    var navElement  = target.parentNode.className;
+    var divElement  = target.parentNode.parentNode;
+    
+    if(navElement == 'next' || navElement == 'previous') {
+        if(divElement.id.substr(0, 3) == 'div') {
+            divElement.className = 'hidden';
+            var str_id  = divElement.id.substr(3);
+            var id      = parseInt(str_id);
+            if(navElement == 'next') id++;
+            else id--;
+            var str_idNew   = id.toString();
+            var nextDivId   = 'div' + str_idNew;
+            document.getElementById(nextDivId).className = '';
+        }
+    }
+    
+};  
+</script>
+
+</body>
+</html>
